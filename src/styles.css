@@ -293,8 +293,7 @@
   .nav-wordmark { max-width: 13rem; white-space: normal; line-height: 1.25; text-align: left; }
   .home-hero { padding: .75rem; }
   .hero-frame { min-height: calc(100svh - 7.9rem); padding-inline: 1rem; }
-  .hero-frame .eyebrow { font-size: .58rem; }
-  .hero-sub { font-size: .75rem; letter-spacing: .3em; }
+  .hero-label { font-size: .75rem; letter-spacing: .3em; }
   .intro-section h2 { font-size: 2.25rem; }
   .credential { min-height: 9rem; }
   .credential strong { font-size: 1.45rem; }
