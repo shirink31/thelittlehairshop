@@ -30,9 +30,8 @@ function HomePage() {
       <section className="home-hero">
         <div className="hero-frame">
           <span className="frame-diamond frame-diamond-top" aria-hidden="true" />
-          <p className="eyebrow">Point Loma · San Diego</p>
           <h1 className="hero-script">The Little Hair Shop</h1>
-          <p className="hero-sub">Hair Salon</p>
+          <p className="hero-label">Point Loma · San Diego</p>
           <span className="frame-diamond frame-diamond-bottom" aria-hidden="true" />
         </div>
       </section>

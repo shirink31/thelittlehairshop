@@ -171,6 +171,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  justify-self: center;
+  margin-inline: auto;
   animation: settle 900ms cubic-bezier(.2,.7,.2,1) both;
 }
 .hero-frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid var(--color-gold); pointer-events: none; }
@@ -185,8 +187,12 @@
   font-family: var(--font-script);
   font-weight: 400;
 }
-.hero-script { margin-top: 1.5rem; font-size: clamp(4rem, 12vw, 8.5rem); line-height: .92; }
-.hero-sub { margin-top: 1.65rem; font-family: var(--font-display); font-size: clamp(.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: .36em; }
+.hero-script { margin-top: 1.5rem; font-size: clamp(44px, 7vw, 104px); line-height: 1.05; text-wrap: balance; }
+.hero-label { margin-top: 1.65rem; font-family: var(--font-display); font-size: clamp(.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: .36em; }
+
+@media (min-width: 640px) {
+  .hero-script { white-space: nowrap; }
+}
 .intro-section { padding-block: clamp(4.5rem, 9vw, 8rem); text-align: center; }
 .intro-section h2 { max-width: 62rem; margin-inline: auto; font-size: clamp(2.15rem, 5vw, 4.2rem); line-height: 1.08; }
 .intro-section > p { max-width: 44rem; margin: 2rem auto 0; font-size: 1.05rem; line-height: 1.8; }
@@ -264,7 +270,6 @@
   .nav-instagram { grid-column: 2; grid-row: 1; }
   .nav-links { grid-column: 1 / -1; grid-row: 2; justify-content: center; gap: clamp(.65rem, 4vw, 1.35rem); border-top: 1px solid color-mix(in oklab, var(--color-gold) 45%, transparent); }
   .home-hero { min-height: calc(100svh - 6.4rem); }
-  .hero-script { font-size: clamp(3.6rem, 18vw, 6.5rem); }
   .credentials { grid-template-columns: repeat(2, 1fr); }
   .credential:nth-child(3) { border-left: 0; }
   .credential:nth-child(n+3) { border-top: 1px solid var(--color-gold); }
@@ -287,8 +292,7 @@
   .nav-wordmark { max-width: 13rem; white-space: normal; line-height: 1.25; text-align: left; }
   .home-hero { padding: .75rem; }
   .hero-frame { min-height: calc(100svh - 7.9rem); padding-inline: 1rem; }
-  .hero-frame .eyebrow { font-size: .58rem; }
-  .hero-sub { font-size: .75rem; letter-spacing: .3em; }
+  .hero-label { font-size: .75rem; letter-spacing: .3em; }
   .intro-section h2 { font-size: 2.25rem; }
   .credential { min-height: 9rem; }
   .credential strong { font-size: 1.45rem; }
