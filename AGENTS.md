@@ -8,3 +8,5 @@
 > Commits you push to the connected branch sync back to Lovable and show up in
 > the editor, so keep the branch in a working state.
 <!-- LOVABLE:END -->
+
+- Keep shared site chrome in `src/components/site-shell.tsx` and page SEO/schema generation in `src/lib/site.ts`; this keeps all six routes visually and semantically consistent.
