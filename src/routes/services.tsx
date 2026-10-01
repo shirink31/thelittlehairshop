@@ -36,7 +36,7 @@ function ServicesPage() {
                 <ul>
                   {group.items.map((item, index) => typeof item === "string"
                     ? <li key={item}>{item}</li>
-                    : <li className="add-on" key={`${item.addOn}-${index}`}><span>Add-ons</span>{item.addOn}</li>)}
+                    : <li className="add-on" key={`${item.addOn}-${index}`}><span>ADD-ONS:</span>{item.addOn}</li>)}
                 </ul>
                 {group.smallNote && <p className="small-note">{group.smallNote}</p>}
               </article>
