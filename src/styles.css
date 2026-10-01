@@ -171,6 +171,8 @@
   align-items: center;
   justify-content: center;
   text-align: center;
+  justify-self: center;
+  margin-inline: auto;
   animation: settle 900ms cubic-bezier(.2,.7,.2,1) both;
 }
 .hero-frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid var(--color-gold); pointer-events: none; }
@@ -185,8 +187,12 @@
   font-family: var(--font-script);
   font-weight: 400;
 }
-.hero-script { margin-top: 1.5rem; font-size: clamp(4rem, 12vw, 8.5rem); line-height: .92; }
-.hero-sub { margin-top: 1.65rem; font-family: var(--font-display); font-size: clamp(.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: .36em; }
+.hero-script { margin-top: 1.5rem; font-size: clamp(44px, 7vw, 104px); line-height: 1.05; text-wrap: balance; }
+.hero-label { margin-top: 1.65rem; font-family: var(--font-display); font-size: clamp(.9rem, 2vw, 1.2rem); text-transform: uppercase; letter-spacing: .36em; }
+
+@media (min-width: 640px) {
+  .hero-script { white-space: nowrap; }
+}
 .intro-section { padding-block: clamp(4.5rem, 9vw, 8rem); text-align: center; }
 .intro-section h2 { max-width: 62rem; margin-inline: auto; font-size: clamp(2.15rem, 5vw, 4.2rem); line-height: 1.08; }
 .intro-section > p { max-width: 44rem; margin: 2rem auto 0; font-size: 1.05rem; line-height: 1.8; }
