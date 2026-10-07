@@ -29,7 +29,7 @@ export class ClassifyError extends Error {
 }
 
 export async function classifyImage(dataUrl: string): Promise<Category> {
-  const apiKey = process.env.LOVABLE_API_KEY;
+  const apiKey = process.env['LOVABLE_API_KEY'];
   if (!apiKey) throw new ClassifyError("AI is not configured yet.", 401);
 
   const provider = createOpenAI({
@@ -49,7 +49,7 @@ export async function classifyImage(dataUrl: string): Promise<Category> {
         role: "user",
         content: [
           { type: "text", text: "Which category best fits this photo?" },
-          { type: "image", image: new URL(dataUrl) },
+          { type: "file", mediaType: "image/jpeg", data: new URL(dataUrl) },
         ],
       },
     ],
