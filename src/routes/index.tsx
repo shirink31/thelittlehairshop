@@ -85,7 +85,6 @@ function HomePage() {
           <p className="eyebrow">Your Colorist</p>
           <h2>Sandy DeBoer</h2>
           <span className="gold-diamond" aria-hidden="true" />
-          <p>Owner, colorist, and extension specialist. Every appointment is one on one, in her private Point Loma studio.</p>
           <Button asChild variant="outline"><Link to="/about">About Sandy</Link></Button>
         </div>
       </section>
