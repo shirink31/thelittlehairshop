@@ -301,6 +301,9 @@
   .credential:nth-child(3) { border-left: 0; }
   .credential:nth-child(n+3) { border-top: 1px solid var(--color-gold); }
   .signature-grid { grid-template-columns: 1fr; }
+  .owner-photo { grid-template-columns: 1fr; }
+  .photo-frame-portrait { width: min(86%, 28rem); margin-inline: auto; }
+  .owner-photo-text { align-items: center; text-align: center; }
   .about-layout { grid-template-columns: 1fr; }
   .portrait-frame { width: min(86%, 28rem); margin-inline: auto; }
   .services-grid { grid-template-columns: 1fr; }
