@@ -14,6 +14,7 @@ import { Route as AboutRouteImport } from './routes/about'
 import { Route as PortfolioRouteImport } from './routes/portfolio'
 import { Route as ReviewsRouteImport } from './routes/reviews'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as StudioRouteImport } from './routes/studio'
 import { Route as VisitRouteImport } from './routes/visit'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,6 +42,11 @@ const ServicesRoute = ServicesRouteImport.update({
   path: '/services',
   getParentRoute: () => rootRouteImport,
 } as any)
+const StudioRoute = StudioRouteImport.update({
+  id: '/studio',
+  path: '/studio',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const VisitRoute = VisitRouteImport.update({
   id: '/visit',
   path: '/visit',
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/portfolio': typeof PortfolioRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
+  '/studio': typeof StudioRoute
   '/visit': typeof VisitRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/portfolio': typeof PortfolioRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
+  '/studio': typeof StudioRoute
   '/visit': typeof VisitRoute
 }
 export interface FileRoutesById {
@@ -70,13 +78,28 @@ export interface FileRoutesById {
   '/portfolio': typeof PortfolioRoute
   '/reviews': typeof ReviewsRoute
   '/services': typeof ServicesRoute
+  '/studio': typeof StudioRoute
   '/visit': typeof VisitRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/about' | '/portfolio' | '/reviews' | '/services' | '/visit'
+  fullPaths:
+    | '/'
+    | '/about'
+    | '/portfolio'
+    | '/reviews'
+    | '/services'
+    | '/studio'
+    | '/visit'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/about' | '/portfolio' | '/reviews' | '/services' | '/visit'
+  to:
+    | '/'
+    | '/about'
+    | '/portfolio'
+    | '/reviews'
+    | '/services'
+    | '/studio'
+    | '/visit'
   id:
     | '__root__'
     | '/'
@@ -84,6 +107,7 @@ export interface FileRouteTypes {
     | '/portfolio'
     | '/reviews'
     | '/services'
+    | '/studio'
     | '/visit'
   fileRoutesById: FileRoutesById
 }
@@ -93,6 +117,7 @@ export interface RootRouteChildren {
   PortfolioRoute: typeof PortfolioRoute
   ReviewsRoute: typeof ReviewsRoute
   ServicesRoute: typeof ServicesRoute
+  StudioRoute: typeof StudioRoute
   VisitRoute: typeof VisitRoute
 }
 
@@ -133,6 +158,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof ServicesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/studio': {
+      id: '/studio'
+      path: '/studio'
+      fullPath: '/studio'
+      preLoaderRoute: typeof StudioRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/visit': {
       id: '/visit'
       path: '/visit'
@@ -149,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   PortfolioRoute: PortfolioRoute,
   ReviewsRoute: ReviewsRoute,
   ServicesRoute: ServicesRoute,
+  StudioRoute: StudioRoute,
   VisitRoute: VisitRoute,
 }
 export const routeTree = rootRouteImport
