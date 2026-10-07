@@ -10,3 +10,5 @@
 <!-- LOVABLE:END -->
 
 - Keep shared site chrome in `src/components/site-shell.tsx` and page SEO/schema generation in `src/lib/site.ts`; this keeps all six routes visually and semantically consistent.
+
+- Portfolio photos live in the private `portfolio` bucket plus `portfolio_photos` table; the first account to sign in at /studio becomes the only owner (claim_owner), and AI sorting runs server-side in `src/lib/classify-photo.server.ts`. Why: public buckets are blocked and uploads must stay owner-only.
