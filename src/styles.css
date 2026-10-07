@@ -198,6 +198,16 @@
 .intro-section > p { max-width: 44rem; margin: 2rem auto 0; font-size: 1.05rem; line-height: 1.8; }
 .button-row { margin-top: 2.25rem; display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; }
 .font-label { letter-spacing: .18em; }
+.photo-band { padding-bottom: clamp(4.5rem, 9vw, 8rem); text-align: center; }
+.photo-frame { position: relative; border: 2px solid var(--color-gold); padding: 8px; }
+.photo-frame::after { content: ""; position: absolute; inset: 8px; border: 1px solid var(--color-gold); pointer-events: none; }
+.photo-frame img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.photo-caption { margin-top: 1.4rem; font-family: var(--font-display); font-size: clamp(.85rem, 1.8vw, 1.05rem); text-transform: uppercase; letter-spacing: .34em; }
+.owner-photo { padding-block: clamp(5rem, 10vw, 8rem); display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1fr); gap: clamp(2.5rem, 8vw, 7rem); align-items: center; }
+.photo-frame-portrait { aspect-ratio: 4 / 5; }
+.owner-photo-text { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
+.owner-photo-text h2 { margin-top: .8rem; font-size: clamp(2.4rem, 5vw, 4rem); }
+.owner-photo-text .gold-diamond { margin-block: 1.5rem; }
 .credentials { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--color-gold); }
 .credential { min-height: 10.5rem; padding: 1.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .credential + .credential { border-left: 1px solid var(--color-gold); }
@@ -291,6 +301,9 @@
   .credential:nth-child(3) { border-left: 0; }
   .credential:nth-child(n+3) { border-top: 1px solid var(--color-gold); }
   .signature-grid { grid-template-columns: 1fr; }
+  .owner-photo { grid-template-columns: 1fr; }
+  .photo-frame-portrait { width: min(86%, 28rem); margin-inline: auto; }
+  .owner-photo-text { align-items: center; text-align: center; }
   .about-layout { grid-template-columns: 1fr; }
   .portrait-frame { width: min(86%, 28rem); margin-inline: auto; }
   .services-grid { grid-template-columns: 1fr; }
