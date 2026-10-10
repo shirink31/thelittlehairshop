@@ -341,3 +341,13 @@
   .hero-frame { animation: none; }
   * { transition-duration: 0.01ms !important; }
 }
+
+img.portrait-placeholder { object-fit: cover; display: block; }
+.visit-map { margin-top: clamp(3rem, 6vw, 5rem); }
+.visit-map iframe { width: 100%; height: clamp(20rem, 45vw, 28rem); border: 1px solid var(--color-gold); display: block; }
+.reviews-cta { margin-top: clamp(3rem, 6vw, 4.5rem); display: flex; justify-content: center; }
+.instagram-band { padding-block: clamp(5rem, 10vw, 8rem); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.instagram-band h2 { margin-top: .8rem; font-size: clamp(2.4rem, 5vw, 4rem); }
+.instagram-band .gold-diamond { margin-top: 1.5rem; }
+.instagram-handle { margin-top: 1.5rem; color: var(--color-rose); font-family: var(--font-label); font-size: .8rem; text-transform: uppercase; letter-spacing: .2em; }
+.instagram-band .inline-flex { margin-top: 2rem; }
