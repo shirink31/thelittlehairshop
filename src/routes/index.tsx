@@ -1,6 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
-import { pageHead } from "@/lib/site";
+import { pageHead, instagramUrl } from "@/lib/site";
 import salonInterior from "@/assets/salon-interior.jpg.asset.json";
 import sandyPortrait from "@/assets/sandy-portrait.jpg.asset.json";
 
@@ -96,6 +96,14 @@ function HomePage() {
           <p className="review-credit">Marisa R. · Google</p>
           <Button asChild variant="outline"><Link to="/reviews">Read All Reviews</Link></Button>
         </div>
+      </section>
+
+      <section className="instagram-band content-width" aria-label="Instagram">
+        <p className="eyebrow">Instagram</p>
+        <h2>Follow Along</h2>
+        <span className="gold-diamond" aria-hidden="true" />
+        <p className="instagram-handle">@thelittle_hairshop</p>
+        <Button asChild><a href={instagramUrl} target="_blank" rel="noreferrer">Follow on Instagram</a></Button>
       </section>
     </main>
   );
