@@ -4,6 +4,10 @@ import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/site";
 
 const directionsUrl = "https://www.google.com/maps/search/?api=1&query=The+Little+Hair+Shop+1360+Rosecrans+St+San+Diego+CA+92106";
+const mapsBrowserKey = import.meta.env["VITE_LOVABLE_CONNECTOR_GOOGLE_MAPS_BROWSER_KEY"] as string | undefined;
+const mapEmbedUrl = mapsBrowserKey
+  ? `https://www.google.com/maps/embed/v1/place?key=${mapsBrowserKey}&q=place_id:ChIJb7hPC_FU2YAREF8MqO753R8`
+  : null;
 
 export const Route = createFileRoute("/visit")({
   head: () => pageHead(
@@ -34,6 +38,17 @@ function VisitPage() {
             <p>(619) 403-0551</p>
           </article>
         </div>
+        {mapEmbedUrl && (
+          <div className="visit-map content-width">
+            <iframe
+              src={mapEmbedUrl}
+              title="Map to The Little Hair Shop, 1360 Rosecrans St, San Diego"
+              loading="lazy"
+              allowFullScreen
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        )}
       </section>
     </main>
   );

@@ -1,6 +1,9 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site-shell";
+import { Button } from "@/components/ui/button";
 import { pageHead } from "@/lib/site";
+
+const writeReviewUrl = "https://search.google.com/local/writereview?placeid=ChIJb7hPC_FU2YAREF8MqO753R8";
 
 export const Route = createFileRoute("/reviews")({
   head: () => pageHead(
@@ -32,6 +35,9 @@ function ReviewsPage() {
                 <p className="review-credit">{credit}</p>
               </article>
             ))}
+          </div>
+          <div className="reviews-cta">
+            <Button asChild variant="outline"><a href={writeReviewUrl} target="_blank" rel="noreferrer">Write a Google Review</a></Button>
           </div>
         </div>
       </section>
