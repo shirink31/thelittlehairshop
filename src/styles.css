@@ -260,17 +260,17 @@
 .portfolio-tile-button { width: 100%; cursor: pointer; text-align: left; background: none; color: inherit; font: inherit; }
 .portfolio-tile-button:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
 .portfolio-tile-caption { display: flex; flex-direction: column; gap: .3rem; }
-.portfolio-tile-more { font-family: var(--font-label); font-size: .55rem; letter-spacing: .22em; color: var(--color-deep-rose); }
+.portfolio-tile-more { font-family: var(--font-label); font-size: .55rem; letter-spacing: .22em; color: var(--color-rose); }
 
-.portfolio-lightbox { position: fixed; inset: 0; z-index: 80; background: var(--color-ink); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; padding: clamp(1rem, 4vw, 3rem); }
-.portfolio-lightbox-close { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: 1px solid var(--color-gold); color: var(--color-gold-foil-light, #D9BC82); font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .2em; padding: .5rem 1rem; cursor: pointer; }
+.portfolio-lightbox { position: fixed; inset: 0; z-index: 80; background: var(--color-foreground); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; padding: clamp(1rem, 4vw, 3rem); }
+.portfolio-lightbox-close { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: 1px solid var(--color-gold); color: var(--color-gold); font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .2em; padding: .5rem 1rem; cursor: pointer; }
 .portfolio-lightbox-frame { position: relative; border: 1px solid var(--color-gold); padding: .45rem; max-width: min(100%, 900px); }
 .portfolio-lightbox-frame::after { content: ""; position: absolute; inset: .35rem; border: 1px solid color-mix(in oklab, var(--color-gold) 60%, transparent); pointer-events: none; }
 .portfolio-lightbox-photo { display: block; max-width: 100%; max-height: 72vh; width: auto; height: auto; object-fit: contain; }
 .portfolio-lightbar { display: flex; align-items: center; gap: 1.5rem; }
-.portfolio-lightbox-arrow { background: none; border: 1px solid var(--color-gold); color: var(--color-gold-foil-light, #D9BC82); font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .2em; padding: .55rem 1.25rem; cursor: pointer; }
+.portfolio-lightbox-arrow { background: none; border: 1px solid var(--color-gold); color: var(--color-gold); font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .2em; padding: .55rem 1.25rem; cursor: pointer; }
 .portfolio-lightbox-arrow:focus-visible, .portfolio-lightbox-close:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 3px; }
-.portfolio-lightbox-count { font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .25em; color: var(--color-gold-foil-light, #D9BC82); }
+.portfolio-lightbox-count { font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .25em; color: var(--color-gold); }
 .studio-section { padding-block: clamp(3rem, 6vw, 5rem); max-width: 40rem; }
 .studio-form { display: grid; gap: 1rem; }
 .studio-form label { font-family: var(--font-label); font-size: .7rem; text-transform: uppercase; letter-spacing: .18em; color: var(--color-rose); }
