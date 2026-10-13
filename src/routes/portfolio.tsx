@@ -20,6 +20,13 @@ import vid7536 from "@/assets/ext-IMG_7536.mp4.asset.json";
 import vid7538 from "@/assets/ext-IMG_7538.mp4.asset.json";
 import poster7536 from "@/assets/ext-IMG_7536-poster.jpg.asset.json";
 import poster7538 from "@/assets/ext-IMG_7538-poster.jpg.asset.json";
+import balayage1 from "@/assets/balayage-1.jpg.asset.json";
+import bridal1 from "@/assets/bridal-1.jpg.asset.json";
+import bridal2 from "@/assets/bridal-2.jpg.asset.json";
+import bridal3 from "@/assets/bridal-3.jpg.asset.json";
+import bridal4 from "@/assets/bridal-4.jpg.asset.json";
+import bridal5 from "@/assets/bridal-5.jpg.asset.json";
+import bridal6 from "@/assets/bridal-6.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
@@ -58,9 +65,18 @@ const categories: Category[] = [
       { src: poster7538.url, video: vid7538.url, alt: "Hair extensions by Sandy DeBoer, second video" },
     ],
   },
-  { label: "Balayage", tileClass: "tile-2", photos: [] },
+  { label: "Balayage", tileClass: "tile-2", photos: [
+      { src: balayage1.url, alt: "Balayage by Sandy DeBoer" },
+  ] },
   { label: "Babylights", tileClass: "tile-3", photos: [] },
-  { label: "Bridal", tileClass: "tile-4", photos: [] },
+  { label: "Bridal", tileClass: "tile-4", photos: [
+      { src: bridal1.url, alt: "Bridal hair by Sandy DeBoer" },
+      { src: bridal2.url, alt: "Bridal hair by Sandy DeBoer, second look" },
+      { src: bridal3.url, alt: "Bridal hair by Sandy DeBoer, third look" },
+      { src: bridal4.url, alt: "Bridal hair by Sandy DeBoer, fourth look" },
+      { src: bridal5.url, alt: "Bridal styling by Sandy DeBoer, on location" },
+      { src: bridal6.url, alt: "Bridal hair by Sandy DeBoer, before and after" },
+  ] },
 ];
 
 function PortfolioPage() {
