@@ -42,6 +42,7 @@ const categories: Category[] = [
 function PortfolioPage() {
   const [openCategory, setOpenCategory] = useState<Category | null>(null);
   const [index, setIndex] = useState(0);
+  const photos = openCategory ? openCategory.photos[index] : undefined;
   const open = openCategory !== null;
 
   useEffect(() => {
