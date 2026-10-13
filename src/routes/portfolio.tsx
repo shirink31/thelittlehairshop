@@ -20,6 +20,13 @@ import vid7536 from "@/assets/ext-IMG_7536.mp4.asset.json";
 import vid7538 from "@/assets/ext-IMG_7538.mp4.asset.json";
 import poster7536 from "@/assets/ext-IMG_7536-poster.jpg.asset.json";
 import poster7538 from "@/assets/ext-IMG_7538-poster.jpg.asset.json";
+import balayage1 from "@/assets/balayage-1.jpg.asset.json";
+import bridal1 from "@/assets/bridal-1.jpg.asset.json";
+import bridal2 from "@/assets/bridal-2.jpg.asset.json";
+import bridal3 from "@/assets/bridal-3.jpg.asset.json";
+import bridal4 from "@/assets/bridal-4.jpg.asset.json";
+import bridal5 from "@/assets/bridal-5.jpg.asset.json";
+import bridal6 from "@/assets/bridal-6.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
