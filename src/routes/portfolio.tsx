@@ -65,8 +65,16 @@ function PortfolioPage() {
       <PageHeader label="Portfolio" title="From the Chair" />
       <section className="portfolio-section content-width">
         <div className="portfolio-grid">
-          {categories.map((category) =>
-            category.photos.length > 0 ? (
+          {categories.map((category) => {
+            const cover = category.photos[0];
+            if (!cover) {
+              return (
+                <div key={category.label} className={`portfolio-tile ${category.tileClass}`}>
+                  <span>{category.label}</span>
+                </div>
+              );
+            }
+            return (
               <button
                 key={category.label}
                 type="button"
@@ -77,8 +85,8 @@ function PortfolioPage() {
               >
                 <img
                   className="portfolio-photo"
-                  src={category.photos[0].src}
-                  alt={category.photos[0].alt}
+                  src={cover.src}
+                  alt={cover.alt}
                   loading="lazy"
                 />
                 <span className="portfolio-tile-caption">
@@ -90,12 +98,8 @@ function PortfolioPage() {
                   )}
                 </span>
               </button>
-            ) : (
-              <div key={category.label} className={`portfolio-tile ${category.tileClass}`}>
-                <span>{category.label}</span>
-              </div>
-            ),
-          )}
+            );
+          })}
         </div>
         <div className="portfolio-cta">
           <p>We post our newest work on Instagram.</p>
