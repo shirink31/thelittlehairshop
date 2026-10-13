@@ -7,6 +7,12 @@ import ext3340 from "@/assets/ext-IMG_3340.jpg.asset.json";
 import ext7534 from "@/assets/ext-IMG_7534.jpg.asset.json";
 import ext7539 from "@/assets/ext-IMG_7539.jpg.asset.json";
 import ext7540 from "@/assets/ext-IMG_7540.jpg.asset.json";
+import extBeforeAfter from "@/assets/ext-before-after.jpg.asset.json";
+import ext8362 from "@/assets/ext-IMG_8362.jpg.asset.json";
+import ext8368 from "@/assets/ext-IMG_8368.jpg.asset.json";
+import ext3344 from "@/assets/ext-IMG_3344.jpg.asset.json";
+import ext3345 from "@/assets/ext-IMG_3345.jpg.asset.json";
+import ext3348 from "@/assets/ext-IMG_3348.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
@@ -32,6 +38,12 @@ const categories: Category[] = [
       { src: ext7534.url, alt: "Hair extensions by Sandy DeBoer, second look" },
       { src: ext7539.url, alt: "Hair extensions by Sandy DeBoer, third look" },
       { src: ext7540.url, alt: "Hair extensions by Sandy DeBoer, fourth look" },
+      { src: extBeforeAfter.url, alt: "Hair extensions by Sandy DeBoer, before and after" },
+      { src: ext8362.url, alt: "Hair extensions by Sandy DeBoer, before" },
+      { src: ext8368.url, alt: "Hair extensions by Sandy DeBoer, after" },
+      { src: ext3344.url, alt: "Hair extensions by Sandy DeBoer, brunette blend" },
+      { src: ext3345.url, alt: "Hair extensions by Sandy DeBoer, brunette blend, second look" },
+      { src: ext3348.url, alt: "Hair extensions by Sandy DeBoer, brunette blend, third look" },
     ],
   },
   { label: "Balayage", tileClass: "tile-2", photos: [] },
