@@ -261,8 +261,6 @@
 .portfolio-tile-button:focus-visible { outline: 2px solid var(--color-gold); outline-offset: 4px; }
 .portfolio-tile-caption { display: flex; flex-direction: column; gap: .3rem; }
 .portfolio-tile-more { font-family: var(--font-label); font-size: .55rem; letter-spacing: .22em; color: var(--color-rose); }
-.portfolio-single { display: flex; justify-content: center; margin-bottom: clamp(3rem, 6vw, 5rem); }
-.portfolio-tile-single { width: min(100%, 460px); aspect-ratio: 4 / 5; padding: 1.25rem; }
 
 .portfolio-lightbox { position: fixed; inset: 0; z-index: 80; background: var(--color-foreground); display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 1.5rem; padding: clamp(1rem, 4vw, 3rem); }
 .portfolio-lightbox-close { position: absolute; top: 1.25rem; right: 1.25rem; background: none; border: 1px solid var(--color-gold); color: var(--color-gold); font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .2em; padding: .5rem 1rem; cursor: pointer; }
