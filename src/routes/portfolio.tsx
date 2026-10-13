@@ -13,6 +13,9 @@ import ext8368 from "@/assets/ext-IMG_8368.jpg.asset.json";
 import ext3344 from "@/assets/ext-IMG_3344.jpg.asset.json";
 import ext3345 from "@/assets/ext-IMG_3345.jpg.asset.json";
 import ext3348 from "@/assets/ext-IMG_3348.jpg.asset.json";
+import ext7531 from "@/assets/ext-IMG_7531.jpg.asset.json";
+import ext7532 from "@/assets/ext-IMG_7532.jpg.asset.json";
+import ext7533 from "@/assets/ext-IMG_7533.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
@@ -44,6 +47,9 @@ const categories: Category[] = [
       { src: ext3344.url, alt: "Hair extensions by Sandy DeBoer, brunette blend" },
       { src: ext3345.url, alt: "Hair extensions by Sandy DeBoer, brunette blend, second look" },
       { src: ext3348.url, alt: "Hair extensions by Sandy DeBoer, brunette blend, third look" },
+      { src: ext7531.url, alt: "Hair extensions by Sandy DeBoer, blonde before" },
+      { src: ext7532.url, alt: "Hair extensions by Sandy DeBoer, blonde before, side view" },
+      { src: ext7533.url, alt: "Hair extensions by Sandy DeBoer, blonde before, second look" },
     ],
   },
   { label: "Balayage", tileClass: "tile-2", photos: [] },
