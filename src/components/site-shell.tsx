@@ -39,7 +39,7 @@ export function SiteFooter() {
       <nav className="footer-links" aria-label="Footer navigation">
         {navLinks.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}
       </nav>
-      <p>Women-owned hair salon · Point Loma, San Diego · 1360 Rosecrans St, Suite J · (619) 403-0551</p>
+      <p>Women-owned hair salon · Point Loma, San Diego<br />1360 Rosecrans St, Suite J · (619) 403-0551</p>
     </footer>
   );
 }
