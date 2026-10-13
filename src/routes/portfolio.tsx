@@ -107,7 +107,7 @@ function PortfolioPage() {
         </div>
       </section>
 
-      {openCategory && (
+      {openCategory && photos && (
         <div className="portfolio-lightbox" role="dialog" aria-modal="true" aria-label={`${openCategory.label} photos`}>
           <button
             type="button"
@@ -120,8 +120,8 @@ function PortfolioPage() {
           <div className="portfolio-lightbox-frame">
             <img
               className="portfolio-lightbox-photo"
-              src={openCategory.photos[index].src}
-              alt={`${openCategory.photos[index].alt}, photo ${index + 1}`}
+              src={photos.src}
+              alt={`${photos.alt}, photo ${index + 1}`}
             />
           </div>
           <div className="portfolio-lightbar">
