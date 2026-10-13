@@ -49,10 +49,10 @@ function PortfolioPage() {
     <main>
       <PageHeader label="Portfolio" title="From the Chair" />
       <section className="portfolio-section content-width">
-        <div className="portfolio-grid">
+        <div className="portfolio-single">
           <button
             type="button"
-            className="portfolio-tile tile-1 portfolio-tile-button"
+            className="portfolio-tile portfolio-tile-button portfolio-tile-single"
             onClick={() => { setIndex(0); setOpen(true); }}
             aria-haspopup="dialog"
             aria-label="View all extensions photos"
