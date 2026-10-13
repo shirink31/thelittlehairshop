@@ -251,7 +251,7 @@
 .reviews-grid article + article { border-left: 1px solid var(--color-gold); }
 .reviews-grid blockquote { font-size: 1.05rem; line-height: 1.75; }
 .portfolio-section { padding-block: clamp(4rem, 8vw, 7rem); }
-.portfolio-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(12, 3.1rem); gap: 1rem; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(12, 1fr); grid-template-rows: repeat(20, 3.1rem); gap: 1rem; }
 .portfolio-tile { position: relative; border: 1px solid var(--color-gold); display: flex; align-items: flex-end; padding: 1rem; }
 .portfolio-tile::after { content: ""; position: absolute; inset: .45rem; border: 1px solid color-mix(in oklab, var(--color-gold) 65%, transparent); }
 .portfolio-tile span { position: relative; z-index: 1; font-family: var(--font-label); font-size: .65rem; text-transform: uppercase; letter-spacing: .18em; }
@@ -290,6 +290,7 @@
 .tile-2 { grid-area: 2 / 7 / 6 / 13; background: color-mix(in oklab, var(--color-deep-pink) 82%, var(--color-background)); }
 .tile-3 { grid-area: 8 / 2 / 13 / 7; background: color-mix(in oklab, var(--color-pink) 72%, var(--color-background)); }
 .tile-4 { grid-area: 6 / 8 / 12 / 12; background: var(--color-deep-pink); }
+.tile-5 { grid-area: 14 / 4 / 20 / 10; background: color-mix(in oklab, var(--color-deep-pink) 60%, var(--color-background)); }
 .portfolio-cta { padding-top: 3rem; border-top: 1px solid var(--color-gold); display: flex; align-items: center; justify-content: space-between; gap: 2rem; }
 .portfolio-cta p { font-size: clamp(1.25rem, 2.5vw, 1.8rem); }
 .visit-panel { padding-block: clamp(5rem, 10vw, 8rem); }
@@ -341,11 +342,12 @@
   .credential { min-height: 9rem; }
   .credential strong { font-size: 1.45rem; }
   .credential span { font-size: .55rem; }
-  .portfolio-grid { grid-template-rows: repeat(14, 2.2rem); }
+  .portfolio-grid { grid-template-rows: repeat(22, 2.2rem); }
   .tile-1 { grid-area: 1 / 1 / 8 / 8; }
   .tile-2 { grid-area: 2 / 8 / 7 / 13; }
   .tile-3 { grid-area: 8 / 1 / 14 / 6; }
   .tile-4 { grid-area: 7 / 6 / 15 / 13; }
+  .tile-5 { grid-area: 16 / 1 / 22 / 13; }
   .portfolio-cta { align-items: flex-start; flex-direction: column; }
   .portfolio-cta .inline-flex { width: 100%; white-space: normal; text-align: center; }
 }

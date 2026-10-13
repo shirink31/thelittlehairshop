@@ -27,6 +27,12 @@ import bridal3 from "@/assets/bridal-3.jpg.asset.json";
 import bridal4 from "@/assets/bridal-4.jpg.asset.json";
 import bridal5 from "@/assets/bridal-5.jpg.asset.json";
 import bridal6 from "@/assets/bridal-6.jpg.asset.json";
+import color1 from "@/assets/color-1.jpg.asset.json";
+import color2 from "@/assets/color-2.jpg.asset.json";
+import color3 from "@/assets/color-3.jpg.asset.json";
+import color4 from "@/assets/color-4.jpg.asset.json";
+import color5 from "@/assets/color-5.jpg.asset.json";
+import color6 from "@/assets/color-6.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
@@ -76,6 +82,14 @@ const categories: Category[] = [
       { src: bridal4.url, alt: "Bridal hair by Sandy DeBoer, fourth look" },
       { src: bridal5.url, alt: "Bridal styling by Sandy DeBoer, on location" },
       { src: bridal6.url, alt: "Bridal hair by Sandy DeBoer, before and after" },
+  ] },
+  { label: "Color", tileClass: "tile-5", photos: [
+      { src: color4.url, alt: "Vibrant purple color by Sandy DeBoer" },
+      { src: color5.url, alt: "Vibrant pink color by Sandy DeBoer" },
+      { src: color2.url, alt: "Platinum blonde color by Sandy DeBoer" },
+      { src: color3.url, alt: "Platinum blonde color by Sandy DeBoer, second look" },
+      { src: color6.url, alt: "Golden blonde color by Sandy DeBoer" },
+      { src: color1.url, alt: "Glossy brunette color by Sandy DeBoer" },
   ] },
 ];
 
