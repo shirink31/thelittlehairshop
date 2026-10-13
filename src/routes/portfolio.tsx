@@ -16,6 +16,10 @@ import ext3348 from "@/assets/ext-IMG_3348.jpg.asset.json";
 import ext7531 from "@/assets/ext-IMG_7531.jpg.asset.json";
 import ext7532 from "@/assets/ext-IMG_7532.jpg.asset.json";
 import ext7533 from "@/assets/ext-IMG_7533.jpg.asset.json";
+import vid7536 from "@/assets/ext-IMG_7536.mp4.asset.json";
+import vid7538 from "@/assets/ext-IMG_7538.mp4.asset.json";
+import poster7536 from "@/assets/ext-IMG_7536-poster.jpg.asset.json";
+import poster7538 from "@/assets/ext-IMG_7538-poster.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
@@ -29,7 +33,7 @@ export const Route = createFileRoute("/portfolio")({
 type Category = {
   label: string;
   tileClass: string;
-  photos: { src: string; alt: string }[];
+  photos: { src: string; alt: string; video?: string }[];
 };
 
 const categories: Category[] = [
@@ -50,6 +54,8 @@ const categories: Category[] = [
       { src: ext7531.url, alt: "Hair extensions by Sandy DeBoer, blonde before" },
       { src: ext7532.url, alt: "Hair extensions by Sandy DeBoer, blonde before, side view" },
       { src: ext7533.url, alt: "Hair extensions by Sandy DeBoer, blonde before, second look" },
+      { src: poster7536.url, video: vid7536.url, alt: "Hair extensions by Sandy DeBoer, video" },
+      { src: poster7538.url, video: vid7538.url, alt: "Hair extensions by Sandy DeBoer, second video" },
     ],
   },
   { label: "Balayage", tileClass: "tile-2", photos: [] },
@@ -137,11 +143,24 @@ function PortfolioPage() {
             Close
           </button>
           <div className="portfolio-lightbox-frame">
-            <img
-              className="portfolio-lightbox-photo"
-              src={photos.src}
-              alt={`${photos.alt}, photo ${index + 1}`}
-            />
+            {photos.video ? (
+              <video
+                key={photos.video}
+                className="portfolio-lightbox-photo"
+                src={photos.video}
+                poster={photos.src}
+                controls
+                playsInline
+                preload="metadata"
+                aria-label={photos.alt}
+              />
+            ) : (
+              <img
+                className="portfolio-lightbox-photo"
+                src={photos.src}
+                alt={`${photos.alt}, photo ${index + 1}`}
+              />
+            )}
           </div>
           <div className="portfolio-lightbar">
             <button
