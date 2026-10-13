@@ -1,5 +1,3 @@
-// ============= Full file contents =============
-
 import { useEffect, useState } from "react";
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site-shell";
@@ -19,23 +17,40 @@ export const Route = createFileRoute("/portfolio")({
   component: PortfolioPage,
 });
 
-const work = [
-  { label: "Extensions", src: ext3340.url },
-  { label: "Extensions", src: ext7534.url },
-  { label: "Extensions", src: ext7539.url },
-  { label: "Extensions", src: ext7540.url },
+type Category = {
+  label: string;
+  tileClass: string;
+  photos: { src: string; alt: string }[];
+};
+
+const categories: Category[] = [
+  {
+    label: "Extensions",
+    tileClass: "tile-1",
+    photos: [
+      { src: ext3340.url, alt: "Hair extensions by Sandy DeBoer" },
+      { src: ext7534.url, alt: "Hair extensions by Sandy DeBoer, second look" },
+      { src: ext7539.url, alt: "Hair extensions by Sandy DeBoer, third look" },
+      { src: ext7540.url, alt: "Hair extensions by Sandy DeBoer, fourth look" },
+    ],
+  },
+  { label: "Balayage", tileClass: "tile-2", photos: [] },
+  { label: "Babylights", tileClass: "tile-3", photos: [] },
+  { label: "Bridal", tileClass: "tile-4", photos: [] },
 ];
 
 function PortfolioPage() {
-  const [open, setOpen] = useState(false);
+  const [openCategory, setOpenCategory] = useState<Category | null>(null);
   const [index, setIndex] = useState(0);
+  const open = openCategory !== null;
 
   useEffect(() => {
-    if (!open) return;
+    if (!openCategory) return;
+    const count = openCategory.photos.length;
     const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape") setOpen(false);
-      if (event.key === "ArrowRight") setIndex((i) => (i + 1) % work.length);
-      if (event.key === "ArrowLeft") setIndex((i) => (i - 1 + work.length) % work.length);
+      if (event.key === "Escape") setOpenCategory(null);
+      if (event.key === "ArrowRight") setIndex((i) => (i + 1) % count);
+      if (event.key === "ArrowLeft") setIndex((i) => (i - 1 + count) % count);
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -43,31 +58,44 @@ function PortfolioPage() {
       window.removeEventListener("keydown", onKey);
       document.body.style.overflow = "";
     };
-  }, [open]);
+  }, [openCategory]);
 
   return (
     <main>
       <PageHeader label="Portfolio" title="From the Chair" />
       <section className="portfolio-section content-width">
-        <div className="portfolio-single">
-          <button
-            type="button"
-            className="portfolio-tile portfolio-tile-button portfolio-tile-single"
-            onClick={() => { setIndex(0); setOpen(true); }}
-            aria-haspopup="dialog"
-            aria-label="View all extensions photos"
-          >
-            <img
-              className="portfolio-photo"
-              src={work[0].src}
-              alt="Hair extensions by Sandy DeBoer"
-              loading="lazy"
-            />
-            <span className="portfolio-tile-caption">
-              {work[0].label}
-              <small className="portfolio-tile-more">+ {work.length - 1} more photos</small>
-            </span>
-          </button>
+        <div className="portfolio-grid">
+          {categories.map((category) =>
+            category.photos.length > 0 ? (
+              <button
+                key={category.label}
+                type="button"
+                className={`portfolio-tile portfolio-tile-button ${category.tileClass}`}
+                onClick={() => { setIndex(0); setOpenCategory(category); }}
+                aria-haspopup="dialog"
+                aria-label={`View ${category.label.toLowerCase()} photos`}
+              >
+                <img
+                  className="portfolio-photo"
+                  src={category.photos[0].src}
+                  alt={category.photos[0].alt}
+                  loading="lazy"
+                />
+                <span className="portfolio-tile-caption">
+                  {category.label}
+                  {category.photos.length > 1 && (
+                    <small className="portfolio-tile-more">
+                      + {category.photos.length - 1} more photos
+                    </small>
+                  )}
+                </span>
+              </button>
+            ) : (
+              <div key={category.label} className={`portfolio-tile ${category.tileClass}`}>
+                <span>{category.label}</span>
+              </div>
+            ),
+          )}
         </div>
         <div className="portfolio-cta">
           <p>We post our newest work on Instagram.</p>
@@ -75,12 +103,12 @@ function PortfolioPage() {
         </div>
       </section>
 
-      {open && (
-        <div className="portfolio-lightbox" role="dialog" aria-modal="true" aria-label="Extensions photos">
+      {openCategory && (
+        <div className="portfolio-lightbox" role="dialog" aria-modal="true" aria-label={`${openCategory.label} photos`}>
           <button
             type="button"
             className="portfolio-lightbox-close"
-            onClick={() => setOpen(false)}
+            onClick={() => setOpenCategory(null)}
             aria-label="Close photo viewer"
           >
             Close
@@ -88,24 +116,24 @@ function PortfolioPage() {
           <div className="portfolio-lightbox-frame">
             <img
               className="portfolio-lightbox-photo"
-              src={work[index].src}
-              alt={`Hair extensions by Sandy DeBoer, photo ${index + 1}`}
+              src={openCategory.photos[index].src}
+              alt={`${openCategory.photos[index].alt}, photo ${index + 1}`}
             />
           </div>
           <div className="portfolio-lightbar">
             <button
               type="button"
               className="portfolio-lightbox-arrow"
-              onClick={() => setIndex((i) => (i - 1 + work.length) % work.length)}
+              onClick={() => setIndex((i) => (i - 1 + openCategory.photos.length) % openCategory.photos.length)}
               aria-label="Previous photo"
             >
               Prev
             </button>
-            <span className="portfolio-lightbox-count">{index + 1} / {work.length}</span>
+            <span className="portfolio-lightbox-count">{index + 1} / {openCategory.photos.length}</span>
             <button
               type="button"
               className="portfolio-lightbox-arrow"
-              onClick={() => setIndex((i) => (i + 1) % work.length)}
+              onClick={() => setIndex((i) => (i + 1) % openCategory.photos.length)}
               aria-label="Next photo"
             >
               Next
