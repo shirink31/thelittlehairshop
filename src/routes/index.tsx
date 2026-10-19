@@ -1,8 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { Button } from "@/components/ui/button";
 import { pageHead, instagramUrl } from "@/lib/site";
-import salonInterior from "@/assets/salon-interior.jpg.asset.json";
-import sandyPortrait from "@/assets/sandy-portrait.jpg.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => pageHead(
@@ -51,7 +49,7 @@ function HomePage() {
 
       <section className="owner-photo content-width" aria-label="Meet Sandy">
         <figure className="photo-frame photo-frame-portrait">
-          <img src={sandyPortrait.url} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" loading="lazy" />
+          <img src={"/images/sandy-portrait.jpg"} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" loading="lazy" />
         </figure>
         <div className="owner-photo-text">
           <p className="eyebrow">Your Colorist</p>
@@ -72,7 +70,7 @@ function HomePage() {
 
       <section className="photo-band content-width" aria-label="Inside the salon">
         <figure className="photo-frame">
-          <img src={salonInterior.url} alt="Inside The Little Hair Shop: styling chair, mirrors, and shelves of color in soft pink" loading="lazy" />
+          <img src={"/images/salon-interior.jpg"} alt="Inside The Little Hair Shop: styling chair, mirrors, and shelves of color in soft pink" loading="lazy" />
         </figure>
         <p className="photo-caption">The Salon on Rosecrans</p>
       </section>
