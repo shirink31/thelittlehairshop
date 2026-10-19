@@ -40,7 +40,7 @@ function HomePage() {
 
       <section className="intro-section content-width">
         <h2>The Little Hair Shop is a private Point Loma salon for <span className="foil-text">color and extensions.</span></h2>
-        <p>Owner and colorist Sandy DeBoer leads the salon on Rosecrans Street. We see clients by appointment only and tailor each color and cut to the person in the chair.</p>
+        <p>Owner and colorist Sandy DeBoer sees clients by appointment only and tailors each color and cut to your individual needs.</p>
         <div className="button-row">
           <Button asChild><Link to="/portfolio">See the Work</Link></Button>
           <Button asChild variant="outline"><Link to="/services">See the Menu</Link></Button>
