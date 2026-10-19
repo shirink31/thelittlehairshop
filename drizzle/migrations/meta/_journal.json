@@ -15,6 +15,20 @@
       "when": 1792423819168,
       "tag": "0001_lock_owner_claim",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1792449464074,
+      "tag": "0002_confirmed_sandy_owner",
+      "breakpoints": true
+    },
+    {
+      "idx": 3,
+      "version": "7",
+      "when": 1792449558514,
+      "tag": "0003_owner_update_portfolio_files",
+      "breakpoints": true
     }
   ]
 }

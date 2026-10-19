@@ -11,5 +11,5 @@
 
 - Keep shared site chrome in `src/components/site-shell.tsx` and page SEO/schema generation in `src/lib/site.ts`; this keeps all six routes visually and semantically consistent.
 
-- Portfolio photos live in the private `portfolio` bucket plus `portfolio_photos` table; the owner (admin role) is granted manually from the backend only; claim_owner just checks the role and never assigns it, and AI sorting runs server-side in `src/lib/classify-photo.server.ts`. Why: public buckets are blocked and uploads must stay owner-only.
+- Portfolio photos live in the private `portfolio` bucket plus `portfolio_photos` table with public SELECT policies; admin assignment is handled only by a confirmed-email lifecycle trigger on auth.users, never client role writes; claim_owner only checks the role, and AI sorting runs server-side in `src/lib/classify-photo.server.ts`. Why: preserve public gallery reads while keeping writes owner-only and preventing self-assigned privileges.
 - Portfolio page photo boxes are static Lovable asset imports in src/routes/portfolio.tsx (labels: Extensions, Balayage, Babylights, Bridal, Color), not the portfolio_photos table. Sandy's /studio uploads no longer feed the public Portfolio page.

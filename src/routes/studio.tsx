@@ -22,6 +22,8 @@ export const Route = createFileRoute("/studio")({
       { name: "description", content: "Private page for the salon owner to add portfolio photos." },
       { property: "og:title", content: "Studio | The Little Hair Shop" },
       { property: "og:description", content: "Private page for the salon owner to add portfolio photos." },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary" },
       { name: "robots", content: "noindex, nofollow" },
     ],
   }),
