@@ -3,7 +3,8 @@ import { PGlite } from "@electric-sql/pglite";
 import { readFile } from "node:fs/promises";
 
 const db = new PGlite();
-const sandy = "sandy_deboer@yahoo.com";
+const sandy = "shirin@thesdhome.com";
+const oldSandy = "sandy_deboer@yahoo.com";
 let sequence = 0;
 
 beforeAll(async () => {
@@ -25,6 +26,7 @@ beforeAll(async () => {
   `);
   await db.exec(await readFile(new URL("../drizzle/migrations/0002_confirmed_sandy_owner.sql", import.meta.url), "utf8"));
   await db.exec(await readFile(new URL("../drizzle/migrations/0003_owner_update_portfolio_files.sql", import.meta.url), "utf8"));
+  await db.exec((await readFile(new URL("../drizzle/migrations/0004_owner_email_shirin.sql", import.meta.url), "utf8")).replace(/--> statement-breakpoint/g, ""));
 });
 afterAll(async () => { await db.close(); });
 
@@ -45,11 +47,11 @@ test("unconfirmed Sandy receives nothing until email confirmation", async () => 
   expect(await owners(id)).toBe(1);
 });
 test("exact matching is case-insensitive", async () => {
-  const id = await account("SANDY_DEBOER@YAHOO.COM", true);
+  const id = await account("SHIRIN@THESDHOME.COM", true);
   expect(await owners(id)).toBe(1);
 });
 test("no other email including whitespace or aliases receives owner", async () => {
-  for (const email of ["visitor@example.com", "sandy_deboer+other@yahoo.com", " sandy_deboer@yahoo.com", "sandy_deboer@yahoo.com ", "sandy_deboer@yahoo.com.evil"]) {
+  for (const email of ["visitor@example.com", oldSandy, "shirin+other@thesdhome.com", " shirin@thesdhome.com", "shirin@thesdhome.com ", "shirin@thesdhome.com.evil"]) {
     const id = await account(email, true);
     expect(await owners(id)).toBe(0);
   }
