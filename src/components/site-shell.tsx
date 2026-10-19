@@ -39,7 +39,7 @@ export function SiteFooter() {
       <nav className="footer-links" aria-label="Footer navigation">
         {navLinks.map((item) => <Link key={item.to} to={item.to}>{item.label}</Link>)}
       </nav>
-      <p>Women-owned hair salon · Point Loma, San Diego<br />1360 Rosecrans St, Suite J · (619) 403-0551</p>
+      <p>Hair salon · Point Loma, San Diego<br />1360 Rosecrans St, Suite J · (619) 403-0551</p>
     </footer>
   );
 }
@@ -49,7 +49,6 @@ export function PageHeader({ label, title }: { label: string; title: string }) {
     <header className="page-header">
       <p className="eyebrow">{label}</p>
       <h1>{title}</h1>
-      <span className="gold-diamond" aria-hidden="true" />
     </header>
   );
 }

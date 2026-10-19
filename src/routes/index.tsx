@@ -7,7 +7,7 @@ import sandyPortrait from "@/assets/sandy-portrait.jpg.asset.json";
 export const Route = createFileRoute("/")({
   head: () => pageHead(
     "The Little Hair Shop | Hair Salon in Point Loma, San Diego",
-    "Women-owned, appointment-only Point Loma hair salon for custom color, babylights, balayage, color correction, and hair extensions.",
+    "Appointment-only Point Loma hair salon for custom color, babylights, balayage, color correction, and hair extensions.",
     "/",
   ),
   component: HomePage,
@@ -16,14 +16,16 @@ export const Route = createFileRoute("/")({
 const credentials = [
   ["5.0", "Rated on Google"],
   ["10+ years", "Of client loyalty"],
-  ["Extensions", "Tape-in · Micro-tab · Sew-in"],
-  ["Women-owned", "In Point Loma"],
+  ["Full Service", "Color · Cuts · Extensions · Events"],
 ];
 
 const signatures = [
-  ["Extensions", "We cut every set of extensions to blend with your own hair, so the added length looks natural."],
-  ["Babylights", "Fine, soft highlights brighten your color, and a bond builder protects your hair while it lightens."],
+  ["Extensions", "We offer every type of extension and cut each set to blend with your own hair, so the added length looks natural."],
+  ["Highlights and Babylights", "Fine, soft highlights brighten your color, and a bond builder protects your hair while it lightens."],
+  ["Balayage", "Hand-painted balayage adds natural dimension and a soft grow-out."],
+  ["Vivids", "We create vivid fashion color in purples, pinks, blues, and greens."],
   ["Transformations", "We take on color corrections and dramatic changes, including the change from black to platinum."],
+  ["Bridal and Events", "We style hair and makeup for brides, wedding parties, social events, and headshots."],
 ];
 
 function HomePage() {
@@ -39,7 +41,7 @@ function HomePage() {
       </section>
 
       <section className="intro-section content-width">
-        <h2>The Little Hair Shop is a private Point Loma salon for <span className="foil-text">color and extensions.</span></h2>
+        <h2>The Little Hair Shop is a private Point Loma salon for <span className="foil-text">everything your hair needs.</span></h2>
         <p>Owner and colorist Sandy DeBoer sees clients by appointment only and tailors each color and cut to your individual needs.</p>
         <div className="button-row">
           <Button asChild><Link to="/portfolio">See the Work</Link></Button>
@@ -47,11 +49,16 @@ function HomePage() {
         </div>
       </section>
 
-      <section className="photo-band content-width" aria-label="Inside the salon">
-        <figure className="photo-frame">
-          <img src={salonInterior.url} alt="Inside The Little Hair Shop: styling chair, mirrors, and shelves of color in soft pink" loading="lazy" />
+      <section className="owner-photo content-width" aria-label="Meet Sandy">
+        <figure className="photo-frame photo-frame-portrait">
+          <img src={sandyPortrait.url} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" loading="lazy" />
         </figure>
-        <p className="photo-caption">The Salon on Rosecrans</p>
+        <div className="owner-photo-text">
+          <p className="eyebrow">Your Colorist</p>
+          <h2>Sandy DeBoer</h2>
+          <span className="gold-diamond" aria-hidden="true" />
+          <Button asChild variant="outline"><Link to="/about">About Sandy</Link></Button>
+        </div>
       </section>
 
       <section className="credentials content-width" aria-label="Credentials">
@@ -61,6 +68,13 @@ function HomePage() {
             <span>{label}</span>
           </div>
         ))}
+      </section>
+
+      <section className="photo-band content-width" aria-label="Inside the salon">
+        <figure className="photo-frame">
+          <img src={salonInterior.url} alt="Inside The Little Hair Shop: styling chair, mirrors, and shelves of color in soft pink" loading="lazy" />
+        </figure>
+        <p className="photo-caption">The Salon on Rosecrans</p>
       </section>
 
       <section className="signatures content-width">
@@ -74,18 +88,6 @@ function HomePage() {
               <p>{body}</p>
             </article>
           ))}
-        </div>
-      </section>
-
-      <section className="owner-photo content-width" aria-label="Meet Sandy">
-        <figure className="photo-frame photo-frame-portrait">
-          <img src={sandyPortrait.url} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" loading="lazy" />
-        </figure>
-        <div className="owner-photo-text">
-          <p className="eyebrow">Your Colorist</p>
-          <h2>Sandy DeBoer</h2>
-          <span className="gold-diamond" aria-hidden="true" />
-          <Button asChild variant="outline"><Link to="/about">About Sandy</Link></Button>
         </div>
       </section>
 
