@@ -29,6 +29,13 @@
       "when": 1792449558514,
       "tag": "0003_owner_update_portfolio_files",
       "breakpoints": true
+    },
+    {
+      "idx": 4,
+      "version": "7",
+      "when": 1792452979420,
+      "tag": "0004_owner_email_shirin",
+      "breakpoints": true
     }
   ]
 }
