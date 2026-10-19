@@ -1,5 +1,9 @@
 # Roadmap
 
+- [ ] Move all approved static media into public/images and replace hosted asset pointers without visual changes
+- [ ] Check studio photo storage addresses and add Netlify deployment configuration
+- [ ] Verify all local media, gallery navigation, videos, and absence of host-only media references
+
 - [x] Grant owner automatically only to Sandy's confirmed exact email; verify confirmation settings, role security, and rerun scan
 - [ ] Verify Sandy's real signup, inbox confirmation, and signed-in studio flow (blocked until Sandy creates and confirms her account)
 
