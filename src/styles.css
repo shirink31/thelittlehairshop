@@ -208,11 +208,11 @@
 .owner-photo-text { display: flex; flex-direction: column; align-items: flex-start; text-align: left; }
 .owner-photo-text h2 { margin-top: .8rem; font-size: clamp(2.4rem, 5vw, 4rem); }
 .owner-photo-text .gold-diamond { margin-block: 1.5rem; }
-.credentials { display: grid; grid-template-columns: repeat(4, 1fr); border-block: 1px solid var(--color-gold); }
+.credentials { display: grid; grid-template-columns: repeat(3, 1fr); border-block: 1px solid var(--color-gold); }
 .credential { min-height: 10.5rem; padding: 1.5rem 1rem; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
 .credential + .credential { border-left: 1px solid var(--color-gold); }
 .credential strong { font-family: var(--font-display); font-size: clamp(1.55rem, 3vw, 2.5rem); font-weight: 400; }
-.credential span { max-width: 10rem; margin-top: .65rem; font-family: var(--font-label); font-size: .62rem; line-height: 1.55; text-transform: uppercase; letter-spacing: .16em; }
+.credential span { max-width: 14rem; margin-top: .65rem; font-family: var(--font-label); font-size: .62rem; line-height: 1.55; text-transform: uppercase; letter-spacing: .16em; }
 .signatures { padding-block: clamp(5rem, 10vw, 8rem); text-align: center; }
 .signatures > h2 { margin-top: .8rem; font-size: clamp(2.4rem, 5vw, 4rem); }
 .signature-grid { margin-top: 3.25rem; display: grid; grid-template-columns: repeat(3, 1fr); gap: clamp(2rem, 5vw, 5rem); }
@@ -224,8 +224,8 @@
 .review-inner blockquote, .reviews-featured { max-width: 58rem; margin: 1.25rem auto 0; font-family: var(--font-display); font-size: clamp(2rem, 4.8vw, 3.75rem); line-height: 1.18; }
 .review-credit { margin-top: 1.8rem; color: var(--color-rose); font-size: .68rem; text-transform: uppercase; letter-spacing: .17em; }
 .review-inner .inline-flex { margin-top: 2rem; }
-.page-header { padding: clamp(4.5rem, 9vw, 7rem) 1rem clamp(3.5rem, 7vw, 5.5rem); border-bottom: 1px solid var(--color-gold); display: flex; flex-direction: column; align-items: center; text-align: center; }
-.page-header h1 { margin-top: .9rem; font-size: clamp(3rem, 8vw, 6rem); line-height: 1; }
+.page-header { padding: clamp(2.7rem, 5.4vw, 4.2rem) 1rem clamp(2.1rem, 4.2vw, 3.3rem); border-bottom: 1px solid var(--color-gold); display: flex; flex-direction: column; align-items: center; text-align: center; }
+.page-header h1 { margin-top: .9rem; font-size: clamp(2.25rem, 6vw, 4.5rem); line-height: 1; }
 .page-header .gold-diamond { margin-top: 1.7rem; }
 .about-layout { padding-block: clamp(5rem, 10vw, 8rem); display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1fr); gap: clamp(3rem, 9vw, 8rem); align-items: center; }
 .portrait-frame { aspect-ratio: 4 / 5; border: 1px solid var(--color-gold); padding: 0 1.15rem 1.15rem 0; }
@@ -312,9 +312,8 @@
   .nav-instagram { grid-column: 2; grid-row: 1; }
   .nav-links { grid-column: 1 / -1; grid-row: 2; justify-content: center; gap: clamp(.65rem, 4vw, 1.35rem); border-top: 1px solid color-mix(in oklab, var(--color-gold) 45%, transparent); }
   .home-hero { min-height: calc(100svh - 6.4rem); }
-  .credentials { grid-template-columns: repeat(2, 1fr); }
-  .credential:nth-child(3) { border-left: 0; }
-  .credential:nth-child(n+3) { border-top: 1px solid var(--color-gold); }
+  .credentials { grid-template-columns: 1fr; }
+  .credential + .credential { border-left: 0; border-top: 1px solid var(--color-gold); }
   .signature-grid { grid-template-columns: 1fr; }
   .owner-photo { grid-template-columns: 1fr; }
   .photo-frame-portrait { width: min(86%, 28rem); margin-inline: auto; }

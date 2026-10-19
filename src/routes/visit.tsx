@@ -26,7 +26,7 @@ function VisitPage() {
         <div className="visit-grid content-width">
           <article>
             <p className="eyebrow">Address</p>
-            <p>1360 Rosecrans St, Suite J<br />San Diego, CA 92106</p>
+            <p>1360 Rosecrans Street, Suite J<br />San Diego, California 92106</p>
             <Button asChild><a href={directionsUrl} target="_blank" rel="noreferrer">Directions</a></Button>
           </article>
           <article>

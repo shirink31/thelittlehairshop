@@ -17,8 +17,8 @@ const groups: ServiceGroup[] = [
   { title: "Color", note: "Base color includes a blowout and style.", items: ["Base color touch-up", { addOn: "Toning gloss" }, "Haircut", "Dusting", "Vivids", "Face-frame highlights or balayage with toner"] },
   { title: "Highlights and Balayage", note: "Each package includes a bond builder, toning gloss, haircut, and style.", items: ["Partial babylights", "Full babylights", "Partial highlight or balayage package", "Full highlight or balayage package", { addOn: "Root touch-up" }, "Extra bowl of color"], smallNote: "For extra color, tip-out ends, or a root shadow." },
   { title: "Color Correction", note: "We repair uneven or unwanted color and guide major changes, such as dark hair to blonde.", items: ["Color correction", "Transformational color"] },
-  { title: "Extensions", note: "Every extension service includes a haircut for blending.", items: ["Tape-in extensions", "Micro-tab extensions", "Re-taping", "Sew-in wefts", "Extension removal"] },
-  { title: "Bridal", note: "We style hair and makeup for brides and their wedding parties.", items: ["Bridal hair and makeup"] },
+  { title: "Extensions", note: "We offer every major extension method, and every extension service includes a haircut for blending.", items: ["Tape-in extensions", "Micro-tab extensions", "Re-taping", "Sew-in wefts", "Extension removal"] },
+  { title: "Bridal and Social Events", note: "We style hair and makeup for brides, wedding parties, social events, and headshots.", items: ["Bridal hair and makeup", "Social event hair and makeup", "Headshot hair and makeup"] },
 ];
 
 function ServicesPage() {
@@ -27,7 +27,7 @@ function ServicesPage() {
       <PageHeader label="Services" title="The Menu" />
       <section className="services-panel">
         <div className="content-width">
-          <p className="services-intro">We adapt every service to your hair and to the result you want.</p>
+          <p className="services-intro">We shape every service around your hair and the look you have in mind.</p>
           <div className="services-grid">
             {groups.map((group) => (
               <article className="service-group" key={group.title}>
