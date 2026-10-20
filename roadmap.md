@@ -1,5 +1,9 @@
 # Roadmap
 
+- [x] Move all 32 approved static media files into public/images and replace hosted asset pointers without visual changes
+- [x] Check studio photo storage addresses (table and storage are empty; new uploads use backend storage signed URLs) and add Netlify deployment configuration
+- [x] Verify all local media, gallery navigation, and absence of host-only media references; video files are intact, but sandbox Chromium lacks H.264 playback support
+
 - [x] Grant owner automatically only to Sandy's confirmed exact email; verify confirmation settings, role security, and rerun scan
 - [ ] Verify Sandy's real signup, inbox confirmation, and signed-in studio flow (blocked until Sandy creates and confirms her account)
 

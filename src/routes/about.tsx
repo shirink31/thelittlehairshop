@@ -1,7 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site-shell";
 import { pageHead } from "@/lib/site";
-import sandyPortrait from "@/assets/sandy-portrait.jpg.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => pageHead(
@@ -18,7 +17,7 @@ function AboutPage() {
       <PageHeader label="The Owner" title="About Sandy" />
       <section className="about-layout content-width">
         <div className="portrait-frame">
-          <img className="portrait-placeholder" src={sandyPortrait.url} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" />
+          <img className="portrait-placeholder" src={"/images/sandy-portrait.jpg"} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" />
         </div>
         <div className="about-copy">
           <h2>Sandy DeBoer</h2>

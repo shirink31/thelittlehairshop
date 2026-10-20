@@ -3,36 +3,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PageHeader } from "@/components/site-shell";
 import { Button } from "@/components/ui/button";
 import { instagramUrl, pageHead } from "@/lib/site";
-import ext3340 from "@/assets/ext-IMG_3340.jpg.asset.json";
-import ext7534 from "@/assets/ext-IMG_7534.jpg.asset.json";
-import ext7539 from "@/assets/ext-IMG_7539.jpg.asset.json";
-import ext7540 from "@/assets/ext-IMG_7540.jpg.asset.json";
-import extBeforeAfter from "@/assets/ext-before-after.jpg.asset.json";
-import ext8362 from "@/assets/ext-IMG_8362.jpg.asset.json";
-import ext8368 from "@/assets/ext-IMG_8368.jpg.asset.json";
-import ext3344 from "@/assets/ext-IMG_3344.jpg.asset.json";
-import ext3345 from "@/assets/ext-IMG_3345.jpg.asset.json";
-import ext3348 from "@/assets/ext-IMG_3348.jpg.asset.json";
-import ext7531 from "@/assets/ext-IMG_7531.jpg.asset.json";
-import ext7532 from "@/assets/ext-IMG_7532.jpg.asset.json";
-import ext7533 from "@/assets/ext-IMG_7533.jpg.asset.json";
-import vid7536 from "@/assets/ext-IMG_7536.mp4.asset.json";
-import vid7538 from "@/assets/ext-IMG_7538.mp4.asset.json";
-import poster7536 from "@/assets/ext-IMG_7536-poster.jpg.asset.json";
-import poster7538 from "@/assets/ext-IMG_7538-poster.jpg.asset.json";
-import balayage1 from "@/assets/balayage-1.jpg.asset.json";
-import bridal1 from "@/assets/bridal-1.jpg.asset.json";
-import bridal2 from "@/assets/bridal-2.jpg.asset.json";
-import bridal3 from "@/assets/bridal-3.jpg.asset.json";
-import bridal4 from "@/assets/bridal-4.jpg.asset.json";
-import bridal5 from "@/assets/bridal-5.jpg.asset.json";
-import bridal6 from "@/assets/bridal-6.jpg.asset.json";
-import color1 from "@/assets/color-1.jpg.asset.json";
-import color2 from "@/assets/color-2.jpg.asset.json";
-import color3 from "@/assets/color-3.jpg.asset.json";
-import color4 from "@/assets/color-4.jpg.asset.json";
-import color5 from "@/assets/color-5.jpg.asset.json";
-import color6 from "@/assets/color-6.jpg.asset.json";
 
 export const Route = createFileRoute("/portfolio")({
   head: () => pageHead(
@@ -54,42 +24,42 @@ const categories: Category[] = [
     label: "Extensions",
     tileClass: "tile-1",
     photos: [
-      { src: ext7534.url, alt: "Hair extensions by Sandy DeBoer, second look" },
-      { src: ext7539.url, alt: "Hair extensions by Sandy DeBoer, third look" },
-      { src: ext7540.url, alt: "Hair extensions by Sandy DeBoer, fourth look" },
-      { src: ext3344.url, alt: "Hair extensions by Sandy DeBoer, brunette blend" },
-      { src: ext3345.url, alt: "Hair extensions by Sandy DeBoer, brunette blend, second look" },
-      { src: ext3348.url, alt: "Hair extensions by Sandy DeBoer, brunette blend, third look" },
-      { src: extBeforeAfter.url, alt: "Hair extensions by Sandy DeBoer, before and after" },
-      { src: ext8368.url, alt: "Hair extensions by Sandy DeBoer, after" },
-      { src: ext3340.url, alt: "Hair extensions by Sandy DeBoer" },
-      { src: ext8362.url, alt: "Hair extensions by Sandy DeBoer, before" },
-      { src: ext7531.url, alt: "Hair extensions by Sandy DeBoer, blonde before" },
-      { src: ext7532.url, alt: "Hair extensions by Sandy DeBoer, blonde before, side view" },
-      { src: ext7533.url, alt: "Hair extensions by Sandy DeBoer, blonde before, second look" },
-      { src: poster7536.url, video: vid7536.url, alt: "Hair extensions by Sandy DeBoer, video" },
-      { src: poster7538.url, video: vid7538.url, alt: "Hair extensions by Sandy DeBoer, second video" },
+      { src: "/images/ext-IMG_7534.jpg", alt: "Hair extensions by Sandy DeBoer, second look" },
+      { src: "/images/ext-IMG_7539.jpg", alt: "Hair extensions by Sandy DeBoer, third look" },
+      { src: "/images/ext-IMG_7540.jpg", alt: "Hair extensions by Sandy DeBoer, fourth look" },
+      { src: "/images/ext-IMG_3344.jpg", alt: "Hair extensions by Sandy DeBoer, brunette blend" },
+      { src: "/images/ext-IMG_3345.jpg", alt: "Hair extensions by Sandy DeBoer, brunette blend, second look" },
+      { src: "/images/ext-IMG_3348.jpg", alt: "Hair extensions by Sandy DeBoer, brunette blend, third look" },
+      { src: "/images/ext-before-after.jpg", alt: "Hair extensions by Sandy DeBoer, before and after" },
+      { src: "/images/ext-IMG_8368.jpg", alt: "Hair extensions by Sandy DeBoer, after" },
+      { src: "/images/ext-IMG_3340.jpg", alt: "Hair extensions by Sandy DeBoer" },
+      { src: "/images/ext-IMG_8362.jpg", alt: "Hair extensions by Sandy DeBoer, before" },
+      { src: "/images/ext-IMG_7531.jpg", alt: "Hair extensions by Sandy DeBoer, blonde before" },
+      { src: "/images/ext-IMG_7532.jpg", alt: "Hair extensions by Sandy DeBoer, blonde before, side view" },
+      { src: "/images/ext-IMG_7533.jpg", alt: "Hair extensions by Sandy DeBoer, blonde before, second look" },
+      { src: "/images/ext-IMG_7536-poster.jpg", video: "/images/ext-IMG_7536.mp4", alt: "Hair extensions by Sandy DeBoer, video" },
+      { src: "/images/ext-IMG_7538-poster.jpg", video: "/images/ext-IMG_7538.mp4", alt: "Hair extensions by Sandy DeBoer, second video" },
     ],
   },
   { label: "Balayage", tileClass: "tile-2", photos: [
-      { src: balayage1.url, alt: "Balayage by Sandy DeBoer" },
+      { src: "/images/balayage-1.jpg", alt: "Balayage by Sandy DeBoer" },
   ] },
   { label: "Babylights", tileClass: "tile-3", photos: [] },
   { label: "Bridal", tileClass: "tile-4", photos: [
-      { src: bridal1.url, alt: "Bridal hair by Sandy DeBoer" },
-      { src: bridal2.url, alt: "Bridal hair by Sandy DeBoer, second look" },
-      { src: bridal3.url, alt: "Bridal hair by Sandy DeBoer, third look" },
-      { src: bridal4.url, alt: "Bridal hair by Sandy DeBoer, fourth look" },
-      { src: bridal5.url, alt: "Bridal styling by Sandy DeBoer, on location" },
-      { src: bridal6.url, alt: "Bridal hair by Sandy DeBoer, before and after" },
+      { src: "/images/bridal-1.jpg", alt: "Bridal hair by Sandy DeBoer" },
+      { src: "/images/bridal-2.jpg", alt: "Bridal hair by Sandy DeBoer, second look" },
+      { src: "/images/bridal-3.jpg", alt: "Bridal hair by Sandy DeBoer, third look" },
+      { src: "/images/bridal-4.jpg", alt: "Bridal hair by Sandy DeBoer, fourth look" },
+      { src: "/images/bridal-5.jpg", alt: "Bridal styling by Sandy DeBoer, on location" },
+      { src: "/images/bridal-6.jpg", alt: "Bridal hair by Sandy DeBoer, before and after" },
   ] },
   { label: "Color", tileClass: "tile-5", photos: [
-      { src: color4.url, alt: "Vibrant purple color by Sandy DeBoer" },
-      { src: color5.url, alt: "Vibrant pink color by Sandy DeBoer" },
-      { src: color2.url, alt: "Platinum blonde color by Sandy DeBoer" },
-      { src: color3.url, alt: "Platinum blonde color by Sandy DeBoer, second look" },
-      { src: color6.url, alt: "Golden blonde color by Sandy DeBoer" },
-      { src: color1.url, alt: "Glossy brunette color by Sandy DeBoer" },
+      { src: "/images/color-4.jpg", alt: "Vibrant purple color by Sandy DeBoer" },
+      { src: "/images/color-5.jpg", alt: "Vibrant pink color by Sandy DeBoer" },
+      { src: "/images/color-2.jpg", alt: "Platinum blonde color by Sandy DeBoer" },
+      { src: "/images/color-3.jpg", alt: "Platinum blonde color by Sandy DeBoer, second look" },
+      { src: "/images/color-6.jpg", alt: "Golden blonde color by Sandy DeBoer" },
+      { src: "/images/color-1.jpg", alt: "Glossy brunette color by Sandy DeBoer" },
   ] },
 ];
 
