@@ -93,7 +93,7 @@ function PortfolioPage() {
       <section className="portfolio-section content-width">
         <div className="portfolio-grid">
           {categories.map((category) => {
-            const cover = category.photos[0];
+            const cover = category.cover ?? category.photos[0];
             if (!cover) {
               return (
                 <div key={category.label} className={`portfolio-tile ${category.tileClass}`}>
