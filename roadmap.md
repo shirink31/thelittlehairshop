@@ -5,7 +5,7 @@
 - [x] Verify all local media, gallery navigation, and absence of host-only media references; video files are intact, but sandbox Chromium lacks H.264 playback support
 
 - [x] Grant owner automatically only to Sandy's confirmed exact email; verify confirmation settings, role security, and rerun scan
-- [ ] Verify Sandy's real signup, inbox confirmation, and signed-in studio flow (blocked until Sandy creates and confirms her account)
+- [ ] Verify the owner's real signup, inbox confirmation, and signed-in studio flow for shirin@thesdhome.com (blocked until that account is created and confirmed)
 
 - [x] Build shared salon design system, navigation, footer, and metadata helpers
 - [x] Build all six routes with exact supplied copy
