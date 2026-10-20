@@ -17,12 +17,14 @@ type Category = {
   label: string;
   tileClass: string;
   photos: { src: string; alt: string; video?: string }[];
+  cover?: { src: string; alt: string };
 };
 
 const categories: Category[] = [
   {
     label: "Extensions",
     tileClass: "tile-1",
+    cover: { src: "/images/ext-IMG_7540.jpg", alt: "Hair extensions by Sandy DeBoer, fourth look" },
     photos: [
       { src: "/images/ext-IMG_7534.jpg", alt: "Hair extensions by Sandy DeBoer, second look" },
       { src: "/images/ext-IMG_7539.jpg", alt: "Hair extensions by Sandy DeBoer, third look" },
@@ -91,7 +93,7 @@ function PortfolioPage() {
       <section className="portfolio-section content-width">
         <div className="portfolio-grid">
           {categories.map((category) => {
-            const cover = category.photos[0];
+            const cover = category.cover ?? category.photos[0];
             if (!cover) {
               return (
                 <div key={category.label} className={`portfolio-tile ${category.tileClass}`}>

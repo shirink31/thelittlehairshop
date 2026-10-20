@@ -37,4 +37,14 @@ describe("independent media hosting", () => {
     expect(config).toContain('NITRO_PRESET = "netlify"');
     expect(readFileSync(resolve(root, "vite.config.ts"), "utf8")).toContain('publicDir: "dist"');
   });
+
+  test("Extensions cover shows the finished look while the viewer still opens on the first photo", () => {
+    const source = readFileSync(resolve(root, "src/routes/portfolio.tsx"), "utf8");
+    const block = source.slice(source.indexOf('label: "Extensions"'), source.indexOf('label: "Balayage"'));
+    expect(block).toContain('cover: { src: "/images/ext-IMG_7540.jpg"');
+    const photosStart = block.indexOf("photos: [");
+    const photos = block.slice(photosStart, block.indexOf("],", photosStart));
+    const first = Array.from(photos.matchAll(/"(\/images\/[^"\n]+)"/g), (match) => match[1])[0];
+    expect(first).toBe("/images/ext-IMG_7534.jpg");
+  });
 });
