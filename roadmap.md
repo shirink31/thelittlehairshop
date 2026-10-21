@@ -1,7 +1,8 @@
 # Roadmap
 
 - [x] Update the About page with the owner-supplied Sandy biography and verify the displayed text
-- [ ] Clarify the massage-site request before changing this salon site (blocked on identifying the intended project and missing gift-card details)
+- [x] Massage-site request resolved: the gift-card, contact-form, and service-page notes belonged to a different project; the hair shop site is unaffected
+- [x] Verify the Netlify deployment at thelittlehairshopsd.com: About fix and all 32 portfolio media files live and correct
 
 - [x] Move all 32 approved static media files into public/images and replace hosted asset pointers without visual changes
 - [x] Check studio photo storage addresses (table and storage are empty; new uploads use backend storage signed URLs) and add Netlify deployment configuration
