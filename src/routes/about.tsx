@@ -20,10 +20,12 @@ function AboutPage() {
           <img className="portrait-placeholder" src={"/images/sandy-portrait.jpg"} alt="Sandy DeBoer, owner and colorist, at the front desk of The Little Hair Shop" />
         </div>
         <div className="about-copy">
-          <h2>Sandy DeBoer</h2>
+          <h2>Meet Sandy DeBoer</h2>
           <p className="title-line">Owner · Colorist · Extension Specialist</p>
-          <p>Sandy DeBoer is a Point Loma colorist and extension specialist, and the owner of The Little Hair Shop. Her work includes custom color, babylights, balayage, color correction, and all types of hair extensions.</p>
-          <p>Sandy listens first, then delivers the look her clients ask for. She keeps hair healthy through dramatic changes, from black to platinum to bold fashion shades, and her longest-standing clients have been with her for more than ten years.</p>
+          <p>For Sandy DeBoer, doing hair has always been more than a career, it’s been a passion since childhood.</p>
+          <p>With 20 years of experience in the hair industry, Sandy has spent her career perfecting her craft. For the past 10 years, she’s been the proud owner of The Little Hair Shop. This is where her love for beautiful hair meets her passion for making every client feel special.</p>
+          <p>Sandy specializes in custom color, blonding, balayage, dimensional brunettes, color transformations, hair extensions, and cuts and styling. Whether she’s creating a subtle refresh or a dramatic new look, her goal is always to bring each client’s vision to life while keeping their hair healthy and beautiful.</p>
+          <p>At The Little Hair Shop, Sandy believes your salon appointment should feel like time just for you, a chance to relax, feel pampered, and leave feeling confident and beautiful. She treasures the relationships she’s built with her clients over the years and feels lucky to turn something she’s loved since she was a little girl into a career she still loves today.</p>
         </div>
       </section>
     </main>
